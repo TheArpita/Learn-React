@@ -1,0 +1,62 @@
+##EMMET:
+
+- plugin for many popular text editor; web-developer's toolkit.
+- improve HTML and CSS workflow
+- CSS like expressions(abbreviation can be dinamically parsed).
+- also can extend the snippets in run time.
+
+https://docs.emmet.io/abbreviations/syntax/
+
+
+##Library and Framework:
+
+goal of the both is same-
+- out of box functions available.
+- optimising work load.
+- reducing room for error.
+- both are bocks of code developed by third parties to solve common problems in a particular programming language.
+
+technical differences-
+1. use of queries:
+	Library- programmer decides when and where to call
+	Framework- framework dictates that
+2. Functionality/structural:
+	Library- precisely and specifically defined.
+	Framework- special kind of library that does not contain “finished” functions, provide the blueprint but not the finished unit.
+3. Calling:
+	Library- main code calls when needed
+	Framework- calls the main code and ask the necessary supplements(if needed).
+
+
+##CDN(Content Delivery Network):
+
+geographically distributed network of proxy servers and their data centers.
+- provide high availability and performance by distributing the service.
+- to for alleviate the performance bottlenecks.
+
+
+##React naming: the library was designed to allow developers to "react" to changes in state and data within an application and to update the user interface in a declarative and efficient manner.
+
+
+##crossorigin in <script>:
+to use resources from other origin, generally browser will block any acess process with different origins.
+
+
+##React and ReactDom:
+ React: responsible for creating React elements
+ ReactDOM: responsible for rendering React elements to the DOM
+
+
+***class is a reserved property in JavaScript, so className is added in props property of React element.
+
+
+##react.development.js and react.production.js files via CDN:
+
+react.production.js - Minified and optimized production versions of React.
+
+
+##async and defer:
+
+executing of HTML code and fetching script is happend parallelly(asynchronously) in both the cases.
+async- executing of script starts after completion of fetching script
+defer- executing of script starts only after execution of HTML code.
