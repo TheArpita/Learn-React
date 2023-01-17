@@ -19,3 +19,18 @@
 ##transitive dependencies
 ##dependency tree 
 ##BrowserList - makes code compatible for lot of browsers
+
+##Parcel:
+*HMR- Hot Module Replacement
+*File watcher algorith - c++
+*Bundling
+*Minify
+*cleans code
+*Dev and Prod build
+*super fast build algorithm
+*image optimization
+*caching while development
+*compression
+*compatible with older version of browser
+*https on developed
+*port number
