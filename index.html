@@ -8,63 +8,10 @@
     <link rel="stylesheet" href="index.css"/>
 </head>
 <body>
-    <!-- only meant for development, and are not suitable for production. Minified and optimized production versions of React is available in diff CDN link -->
-    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
-    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-    
-    <!-- <div><h1>Header outside Reat root (possible but don't do)</h1></div> -->
     <div id="root">
-        <!--using HTML
-        <h1 id="title">Hello React (Replaced by React Component)</h1>
-        -->
         Not Rendered
-        <!--if it's showing then React is not working properly-->
-
-        <!-- complex/nested structure example -->
-        <!-- <div id="container">
-            <h1>Hello React</h1>
-            <h1>Hello React 1 2</h1>
-        </div> -->
     </div>
 
-    <!-- <div><h1>Footer outside Reat root (possible but don't do)</h1></div> -->
-
-    <!--using JS
-    <script>
-        const heading = document.createElement("h1");
-        heading.innerHTML = "Hello React";
-        const root = document.getElementById("root");
-        root.appendChild(heading);
-    </script>
-    -->
-
-    <!--using React-->
-    <!-- sequence matter, CDN should be before any React code -->
-
-    <script async src="App.js">
-
-        //instead of this, just split in files...
-
-
-        // const heading = React.createElement("h1", { id: "title"}, "Hello React");
-
-
-        // /*
-        // //for complex structure can do this, but it will be very complecated and lenghty. split the app in different files
-        // const heading1 = React.createElement("h1", { id: "title1"}, "Hello React 1");
-        // //multiple chlidren within []
-        // const container = React.createElement("div", { id: "container" }, [heading, heading1]);*/
-
-
-        // //any attribute can be in 2nd parameter of createElement, like- className, style etc.
-        // const root = ReactDOM.createRoot(document.getElementById("root"));
-        // //passing a react element inside the root
-        // root.render(heading);
-        // //everything will be replaced within root with this React component
-
-        // /*for complex structure
-        // root.render(container);*/
-
-    </script>
+    <script type="module" src="App.js"></script>
 </body>
 </html>

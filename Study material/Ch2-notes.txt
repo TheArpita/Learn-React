@@ -1,0 +1,21 @@
+##types in <Script> :
+
+(indicates the type of script represented.)
+1. default(not set)/empty string/JS MIME type: indicates "classic script", containing JavaScript code.
+                                               if the script refers to JS code, omit the attribute, raher specify a MIME type.
+2. module: code treated as a JS module.
+           the charset and defer attributes have no effect.
+           module scripts require the use of the CORS protocol for cross-origin fetching.
+
+3. importmap: indicates the body of the element contains an import map - a JSON object that developers can use to control how the browser resolves module specifiers when importing JS modules.
+              
+
+##bundlers
+##^(carret) and ~(tilde)
+##push package-lock.json to git
+##browser don't understand 'import', need to add type='module' to <script>
+##recent react upgrade - import ReactDOM from "react-dom/client"
+
+##transitive dependencies
+##dependency tree 
+##BrowserList - makes code compatible for lot of browsers

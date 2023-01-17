@@ -1,0 +1,27 @@
+{
+  "name": "learn_react",
+  "version": "1.0.0",
+  "description": "learning core React",
+  "main": "App.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheArpita/Learn-React.git"
+  },
+  "author": "Arpita",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TheArpita/Learn-React/issues"
+  },
+  "homepage": "https://github.com/TheArpita/Learn-React#readme",
+  "devDependencies": {
+    "parcel": "^2.8.2",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}
