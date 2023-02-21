@@ -1,0 +1,40 @@
+##redux- library. manage data. data store/management. like a big object, can have multiple slices(small portion of the store)
+for small project context will be usefull. for big, large scale project redux will be useful.
+cons- complex setup, copy pasting, lot of learing.
+***redux toolkit - new way of doing redux. standard way to write redux logic.
+##updating store:-
+can't modify directly, need to keep track
+(write on store)
+dispatch an action --> call a funtion(Reducer) --> update the slice of the store
+(read from store)
+selector - hook(useSelector). subscribe to the store.
+##libraries needed -
+1. @reduxjs/toolkit: core of redux
+2. react-redux: bridge between redux and react
+
+## steps to configure redux:::
+
+1. create store
+    - configureStore({...}) - rtk
+2. provide store to app 
+    - <Provider store={created_store}> (...wrap the app...) </Provider> - rtk
+3. create slice
+    - createSlice({        - rtk
+        name: ...,
+        initialState: ...,
+        reducers: {
+            action_name: (state, payload)=>{} .... reducer function, no return
+        }
+    })
+
+    export {action_name_1, action_name2} = slice_name.actions;
+    export default slice_name.reducer;
+4. put the slice(s) into created store
+    - configureStore({
+        reducer: {
+            name_1: default_exported_reducer_name,
+            name_2: .....
+        }
+    })
+
+## middleware...

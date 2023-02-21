@@ -1,20 +1,20 @@
-import { useEffect, useState } from "react";
-import {useParams} from "react-router-dom";
 import { commonUrl } from "../constants";
 import Shimmer from "./Shimmer";
+import useRestuarent from "../Utils/useRestuarent";
+import { addItem } from "../Utils/cartSlice";
+import { useDispatch } from "react-redux";
+
 
 export default Restuarent = () => {
-    const {id} = useParams();
-    const [restuarent, setRestuarent] = useState({});
 
-    useEffect(()=>{
-        getDetails();
-    }, []);
+    const restuarent = useRestuarent();
 
-    async function getDetails () {
-        const data = await fetch("https://www.swiggy.com/dapi/menu/v4/full?lat=22.572646&lng=88.36389500000001&menuId="+id);
-        const jsonData = await data.json();
-        setRestuarent(jsonData.data);
+    const dispatch = useDispatch();
+    const handleCart = (e, item) => {
+        e.stopPropagation();
+
+        //dispath an action(addItem) with the payload <item>, as {payload: <item>}
+        dispatch(addItem(item));
     }
 
     return (!restuarent?.menu?.items) ? <Shimmer/> : (
@@ -29,6 +29,7 @@ export default Restuarent = () => {
                         <img src={commonUrl+item?.cloudinaryImageId}/>
                         <h1>{item?.name}</h1>
                         <h2>Cost: {item?.price/100}</h2>
+                        <button className="bg-green-100 p2 m5" onClick={e => handleCart(e, item)}>Add</button>
                     </li>)}
                 </ul>
             </div>

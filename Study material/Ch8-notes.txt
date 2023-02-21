@@ -9,8 +9,8 @@
     a) render phase- pure, no side effects. constructor, render
     b) commit phase- work with DOM. componentDidMount
 2. updating -
-    a) change in state or props, or forced changed - rerender
-    b) componentDidUpdate
+    a) change in state or props, or forced changed - rerender (render phase)
+    b) componentDidUpdate (commit phase)
 3. unmounting - when component is just about to unmount from DOM
     a) componentWillUnmount
 ## componentDidMount can be async but useEffect can't be

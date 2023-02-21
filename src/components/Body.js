@@ -1,13 +1,18 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { cardData } from "../constants";
 import RestuarentCard from "./RestuarentCard";
 import Shimmer from './Shimmer';
 import {Link} from 'react-router-dom';
+import { filterData } from "../Utils/helper";
+import useOnline from "../Utils/useOnline";
+import userContext from "../Utils/userContext";
 
 const Body = () => {
     const [searchValue, setSearchValue] = useState();
     const [allRestuarentList, setAllRestuarentList] = useState([]);
     const [filteredRestuarentList, setFilteredRestuarentList] = useState([]);
+
+    const {user, setUser} = useContext(userContext);
 
     async function getAllRestuarent(){
         const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=22.572646&lng=88.36389500000001&sortBy=RELEVANCE&page_type=DESKTOP_WEB_LISTING");
@@ -15,20 +20,13 @@ const Body = () => {
         setAllRestuarentList(accessableData?.data?.cards[2]?.data?.data?.cards);
         setFilteredRestuarentList(accessableData?.data?.cards[2]?.data?.data?.cards);
     }
-
-    function filterResData (searchedValue) {
-        if(!searchedValue) return allRestuarentList;
-        else
-        {
-            const data = allRestuarentList?.filter((restData) => 
-            restData?.data?.name?.toLowerCase().includes(searchedValue.toLowerCase()));
-            return data;
-        }
-    }
     
     useEffect(()=>{
         getAllRestuarent();
     }, []);
+
+    const online = useOnline();
+    if(!online) return <h1>🔴Check your internet connection</h1>
 
     return(
         <div className="body">
@@ -44,10 +42,11 @@ const Body = () => {
                     //now it's double way binded
                     onChange={(e)=>{setSearchValue(e.target.value)}}
                 />
+                <input value={user.name} onChange={e=>setUser({name: e.target.value})}/>
                 <button
                     className="search-btn"
                     onClick={()=> {
-                        const data = filterResData(searchValue);
+                        const data = filterData(searchValue, allRestuarentList);
                         setFilteredRestuarentList(data);
                     }}
                     // disabled={!searchValue}

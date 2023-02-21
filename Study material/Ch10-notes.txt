@@ -1,0 +1,23 @@
+##ways to put css -
+1. component(or ui) library(material ui, bootstrap, base ui, chakra, ant) - optimized css, saves time, easy to use, built in component, consistent UI, takes care of responsiveness
+    cons - loose control, bundle will be large
+2. scss, saas - make css writting experience good
+3. inline - not a good way; can't reuse, hard coded, repeated, job of processing for browser is heavy
+4. basic css styling added to index.html file; 1 large css file; using className od using ID or html element etc.
+5. styled component - like css inside js file(new ay of writing, needs to learn)
+##tailwind css framework -
+pros -
+css in the same file
+reusability
+less bundle size
+flexible ui(customizable)
+fast
+less code
+cons - new developpers had to learn a little bit, so many classes needed to add in the js itself
+*for using tailwind: 1. cdn link 2. npm package
+##postcss- convert css for browser
+##ctrl+space bar - when tailwind extension doesn't show the option
+##[]notation in tailwind -> when we have to give a specific valie for a css design and it's not included in pre-existing tailwind classes, we can give the value within []; created a dynamic class; try to stick to the native tailwind classes, that way there will be less classes created and tailwind will understand all those.
+##using tailwind - only the classes we use in the code will ship to production
+##add tailwind classes as we used to add normal class; like - in html file add within "class", in react components add within "className"
+

@@ -1,0 +1,46 @@
+## need of test cases - to ensure the code is properly intact; when we write new code is that breaking pre-existing code..
+- maintainability
+## test driven development - write test cases even before write the code
+## different types of testing - manual testing, automation testing [selenium testing], end to end (E2E) test: covers entire user journey [headless browser], unit testing, integration testing.... regretion, smoke, performance etc...
+## React testing library (replacement for enzyme). (uses jest)
+## Jest - delightful JS testing framework with a focus on simplycity
+## test cases doesn't run on browser, it runs on jsdom. so in case of test cases we don't have any root to render, react testing library provide a special function 'render' to render.
+
+1. install react testing library
+2. install jest
+3. configure jest
+    - npx jest --init 
+    (we need to create jest.config.js only once so we use npx instead of npm)
+        *TS - no
+        *jsdom(browser-like)
+        *coverage report - yes
+        *provider - babel
+        *clear mock calls...... - yes
+    Configuration file created
+4. npm run test
+5. solve errors -
+    - package error: install the package
+    - no matches: create test files
+6. after creating test file, getting import syntax error - config babel:
+    - install suggested package
+    - create babel.config.js (suggested), but we already have babelrc, do configuration there
+    [babelrc needs JSON not JS]
+    - convert the given(in doc) js config obj to json obj and put it in babelrc file
+7. add coverage to gitignore
+8. try to render in test case file - error: jsx syntax error
+        - sol: need to add more packages to babelrc(or babel.config.js); i.e. ["@babel/preset-react", {"runtime": "automatic"}]
+        - also install the newly aded package: @babel/preset-react
+9. try to read image file as js and throw error
+        - mock the image by creating a dummy js file. (export same way and same type of file(here string) as used in original file)
+        - in jest.config.js, modify moduleNameMapper: {}
+        (it is the way to tell that all the png take it as dummy image.)
+        config as:
+            moduleNameMapper: {
+                "\\.(png|jpg|svg)$": "../mocks/dummyLogo"
+            }
+10. for exporting like: export default _componentName_, got an error - not define;
+    - sol: don't know
+11. for context error -
+        - add provider to the component which is rendering in test env 
+        - also add static router to avoid route error
+        ('StaticRouter' from 'react-router-dom/server')

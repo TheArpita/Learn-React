@@ -5,6 +5,8 @@ import Profile from "./ProfileClassbased";
 
 import {Component} from "react";
 
+import userContext from "../Utils/userContext";
+
 // const About = () => {
 //     return(
 //         <div>
@@ -32,6 +34,10 @@ class About extends Component {
         console.log('parent render -2');
         return(
                     <div>
+                        {/* use useContext() concept in class component */}
+                        <userContext.Consumer>
+                            {({user})=><h2>Hi {user.name}</h2>}
+                        </userContext.Consumer>
                         <h1>This is About Us page</h1>
                         <ProfileFunctionalComp name="abc"/>
                         <Profile name="1st child"/>

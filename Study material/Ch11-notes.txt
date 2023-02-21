@@ -1,0 +1,6 @@
+##data layer in react - state(local variable within a container) and props(value pass one to another components)
+##props drilling - passing data from a parent to a depth child(not direct); not a good way - components can get data unwantedly, any component updated many components going to be updated
+##data flow child to parent - can use local storage but not a good way.
+##lifting the state up - give the state control of children to parent
+##react contex- like a central store. using contex we can use a piece of code anywhere in the project
+##even before the code is arrived(lazy loading) context value is tracked for the un-rendered component: in case of virtual dom, data layer stays, ui layer is moving, both independent layer

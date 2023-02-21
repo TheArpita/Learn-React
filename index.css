@@ -1,4 +1,9 @@
-#container{
+/* while using tailwind, no other css will be present here. to get all the classes handy we can use an extension - Tailwind css IntelliSense */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* #container{
     background-color: aquamarine;
 }
 
@@ -81,4 +86,4 @@
     height: 200px;
     margin: 10px;
     background: rgb(196, 195, 195);
-}
+} */

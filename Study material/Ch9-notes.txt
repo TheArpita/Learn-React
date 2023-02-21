@@ -1,0 +1,5 @@
+##hook or any common functions - reusability, readability, modularity: broken down code into meaningful pieces (maintanability: easy to debug, more testable)
+##chunking/code-splitting/dynamic bundling/lazy loading/ on-demand loading/dynamic import
+##on-demand loading - react will suspend the component; use "<suspense>..." to prevent the suspension error
+##never lazy load a component inside another component - otherwise for each cycle it'll be lazy loaded. lazy load on top, after imports.
+##lazy loaded part will not be withing the js file which is made by the bundler, after loaded 1st time it'll be available withing the bundle created files but create a diff one.
