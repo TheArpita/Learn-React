@@ -1,0 +1,16 @@
+## Class based React component- render() is mendetory, this () return some jsx
+    constructor - called once at the begining, best place to create state
+    never mutate state directly.(never do this.state = ...)
+    within seState(), it's only do partial state variable update
+    best place for api call - componentDidMount ()
+##React life cycle methods- constructor, render, componentDidMount, componentDidUpdate, componentWillUnmount
+###React lifecycles:-
+1. mounting - 
+    a) render phase- pure, no side effects. constructor, render
+    b) commit phase- work with DOM. componentDidMount
+2. updating -
+    a) change in state or props, or forced changed - rerender
+    b) componentDidUpdate
+3. unmounting - when component is just about to unmount from DOM
+    a) componentWillUnmount
+## componentDidMount can be async but useEffect can't be

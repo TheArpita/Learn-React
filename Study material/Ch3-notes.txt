@@ -1,0 +1,15 @@
+##JSX- html like code, but not html within React, it's not any package. it's an expression. uses react.
+##babel understand < or >
+##JSX=>React.createElement=>object=>HTML in DOM (babel helps JSX)
+##babel comes along with parcel
+##Functional component - js function which returns React element
+##function/component name start with caps
+##return within component: either single line or put in (); can skip 'return' while using arrow func.
+##render/use react element - use the variable name only.
+  render/use react component - use as tag(mandatory to start the name with caps) or call as normal func.
+##xss attack - cross site scrpting attack
+  jsx first do SANITIZATION before run any data
+##component composition/ composing component - use a component within another component
+## babel - compiler/transpiler
+  babel is needed to use JSX
+  babel can create pollyfills

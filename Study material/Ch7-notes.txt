@@ -1,0 +1,11 @@
+##never create a react component within another react component.(can be USED within another react component, but never CREATE)
+##don't use useState with any condition - there will be state variable inconsistency
+##never write useState within a loop
+##never use/create useState outsdide a component, react gives that to create local state variable.
+##cdn is best place to host images - faster, cache, optimize... put optimized image on cdn, after come to browser from cdn it can't be optimized.
+##formik open source library- for forms
+##clicking on <a/> - refresh the whole page
+###SPA - Single Page Application - no network call while changing page. "Link" from "react-router-dom" can do the same.
+### 2 types of routing - 1. Client side routing 2. server side routing - all the pages coming from server
+###dynamic routing :- 
+##import images as default exported

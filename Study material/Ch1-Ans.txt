@@ -14,7 +14,7 @@ goal of the both is same-
 - out of box functions available.
 - optimising work load.
 - reducing room for error.
-- both are bocks of code developed by third parties to solve common problems in a particular programming language.
+- both are blocks of code developed by third parties to solve common problems in a particular programming language.
 
 technical differences-
 1. use of queries:

@@ -11,7 +11,7 @@
               
 
 ##bundlers
-##^(carret) and ~(tilde)
+##^(caret) and ~(tilda)
 ##push package-lock.json to git
 ##browser don't understand 'import', need to add type='module' to <script>
 ##recent react upgrade - import ReactDOM from "react-dom/client"
@@ -34,3 +34,8 @@
 *compatible with older version of browser
 *https on developed
 *port number
+*consistent hashing algorithm
+*zero config
+*tree shaking - remove unwanted
+
+##dependencies and devDependencies

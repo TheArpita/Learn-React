@@ -1,3 +1,84 @@
 #container{
     background-color: aquamarine;
 }
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border: 1px solid blueviolet;
+    background-color: mediumorchid;
+    color: whitesmoke;
+    margin: 5px;
+    align-items: center;
+}
+
+.logo{
+    height: 60px;
+    width: 60px;
+}
+
+.title{
+    display: flex;
+    align-items: center;
+}
+
+.header-options>ul{
+    list-style-type: none;
+    display: flex;
+}
+
+.header-options>ul>li{
+    padding: 10px;
+    color: #fab142;
+}
+
+.body{
+    border: 1px solid blueviolet;
+    padding: 10px;
+    margin: 5px;
+}
+
+.restuarentCard{
+    width: 200px;
+    box-shadow: 5px 5px #f2e7f2;
+    padding: 10px;
+    margin: 10px;
+}
+
+.restuarentCard>img{
+    width: 100%;
+}
+
+.restuarentCard>h4{
+    overflow-wrap: break-word;
+}
+
+.RestuarentList{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.restuarentInfo{
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+.restuarentInfo>h3{
+    display: flex;
+    padding: 5px;
+}
+
+.all_title{
+    background: #f1a2f1;
+    box-shadow: 5px 5px #f2e7f2;
+    padding: 10px; 
+}
+
+.shimmerCard{
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    background: rgb(196, 195, 195);
+}
